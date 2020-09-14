@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "doctolibre-office"
+    }
+  },
+  "defaultProject": "doctolibre-office",
+  "cli": {
+    "analytics": "8d5e06a3-aa5d-4f9f-b61a-b45a294c159a"
+  }
 }
