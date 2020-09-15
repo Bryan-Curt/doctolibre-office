@@ -67,4 +67,12 @@ export class ServiceService {
     })
       .toPromise().then().catch(this.handleError);
   }
+
+  // Créer un patient
+  insertPatient(patient: any): Promise<any>{
+    return this.http.post( this.server + 'api/patient/', patient, {
+      headers : this.setHeaders()
+    })
+      .toPromise().then().catch(this.handleError);
+  }
 }
