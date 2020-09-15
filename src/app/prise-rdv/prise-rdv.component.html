@@ -42,7 +42,7 @@
 
     <div class="form-group">
         <label>Sélectionnez un médecin</label>
-        <select formControlName="medecin" id="f">
+        <select class="form-control" formControlName="medecin" id="f">
             <option value=null disabled selected>le medecin</option>
             <option *ngFor="let item of practitioners">{{item.family}}</option>
         </select>
