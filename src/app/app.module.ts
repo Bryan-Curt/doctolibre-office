@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule  }   from '@angular/forms';
   declarations: [
     AppComponent,
     InfoRdvComponent,
-    PriseRdvComponent,
+    PriseRdvComponent
   ],
   imports: [
     BrowserModule,
