@@ -10,7 +10,7 @@ import { PriseRdvComponent } from './prise-rdv/prise-rdv.component';
   declarations: [
     AppComponent,
     InfoRdvComponent,
-    PriseRdvComponent,
+    PriseRdvComponent
   ],
   imports: [
     BrowserModule,
