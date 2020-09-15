@@ -18,7 +18,6 @@ export class PriseRdvComponent implements OnInit {
       console.log(this.practitioners);
     });
   }
-
   infoReservation = new FormGroup({
     lastName : new FormControl('curt', Validators.required),
     firstName : new FormControl('bryan', Validators.required),

@@ -51,17 +51,14 @@
               <div class="row">
                 <div class="col">
                   <select class="form-control">
-                    <option>18 sept</option>
-                    <option>19 sept</option>
-                    <option>20 sept</option>
-                    <option>21 sept</option>
+                    <option value=null disabled selected>date</option>
+                    <option *ngFor="let item of horaireDate" >{{item}}</option>
                   </select>
                 </div>
                 <div class="col">
                   <select class="form-control">
-                    <option>11:15</option>
-                    <option>14:30</option>
-                    <option>16:00</option>
+                    <option value=null disabled selected>heure</option>
+                    <option *ngFor="let item of horaireHeure" >{{item}}</option>
                   </select>
                 </div>
               </div>
