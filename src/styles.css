@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+.rdv{
+    width:100%;
+    background: linear-gradient(60deg, rgba(224,244,255,1) 73%, rgba(255,255,255,1) 100%);
+    padding:15px;
+    margin:10px 0px;
+    transition: all 0.5s ease-out;
+}
+
+.title{
+    text-transform:uppercase;
+    color:#1699E2;
+    font-weight:bold;
+    font-family:'Roboto', sans-serif;
+}
+
+.rdv:hover{
+    background:#B7E7F0;
+}
+
+.rdv img{
+    width:50px;
+    float:right;
+}
+
+.rdv i{
+    font-style:normal;
+    letter-spacing:2px;
+    font-variant:small-caps;
+    font-weight:bold;
+}
