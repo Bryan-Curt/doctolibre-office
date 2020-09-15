@@ -1,15 +1,15 @@
 <h5 class="title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Mes demandes de rendez-vous
 </h5>
 <div class="rdv" *ngFor="let apt of appointments">
-  <div *ngIf="apt.status == 'refuse'">
+  <div *ngIf="apt.participantStatus == 'declined'">
     <img src="../assets/canceled.png">
   </div>
-  <div *ngIf="apt.status == 'valide'">
+  <div *ngIf="apt.participantStatus == 'accepted'">
     <img src="../assets/validate.png">
   </div>
-  <div *ngIf="apt.status == 'encours'">
+  <div *ngIf="apt.participantStatus == 'tentative'">
     <img src="../assets/wait.png">
   </div>
-  {{apt.id}} à {{apt.id}}<br />
+  {{apt.start}} à {{apt.end}}<br />
   <i>{{apt.id}}</i>
 </div>
