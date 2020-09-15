@@ -9,6 +9,8 @@ import { FormsModule }   from '@angular/forms';
 })
 export class PriseRdvComponent implements OnInit {
   medecins = ['un', 'deux', 'trois']
+  horaireDate = ['16 sept', '17 sept', '19 sept']
+  horaireHeure = ['10:30', '14:15', '16:00']
   constructor() { }
   infoReservation = new FormGroup({
     lastName : new FormControl('curt', Validators.required),
