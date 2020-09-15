@@ -10,6 +10,8 @@ import { FormsModule }   from '@angular/forms';
 })
 export class PriseRdvComponent implements OnInit {
   practitioners = [];
+  horaireDate = ['16 sept', '17 sept', '19 sept']
+  horaireHeure = ['10:30', '14:15', '16:00']
   constructor(private service: ServiceService) {
     service.getPractitioners().then(practitioners => {
       for (const p of practitioners){
