@@ -1,72 +1,69 @@
-<div class="card ml-2" style="width: 45rem; background:#f5f5f5;">
-    <div class="card-body">
-        <h5 class="card-title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Demande de rendez-vous
-        </h5>
-        <div class="row" style="padding:15px;">
-            <div class="col">
-                <form [formGroup]="infoReservation">
-                    <div class="form-group row">
-                        <label class="col-form-label">Nom</label>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="jnojn" formControlName="firstName">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Prénom</label>
-                        <div class="col">
-                            <input type="text" class="form-control" formControlName="lastName">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Tél.</label>
-                        <div class="col">
-                            <input type="number" class="form-control" formControlName="phone">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Date de naissance</label>
-                        <div class="col">
-                            <input type="date" class="form-control" id="start" name="trip-start" value="2018-07-22"
-                                min="2000-01-01" max="3000-12-31">
-                        </div>
-                    </div>
-
-                </form>
-
+      <h5 class="title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Demande de rendez-vous
+      </h5>
+      <div class="row" style="padding:15px;">
+        <div class="col">
+          <form [formGroup]="infoReservation">
+            <div class="form-group row">
+              <label class="col-form-label">Nom</label>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="jnojn" formControlName="firstName">
+              </div>
             </div>
-            <div class="col">
-                <form>
-                    <div class="form-group">
-                        <label>Sélectionnez un médecin</label>
-                        <select class="form-control">
-                            <option>Médecin un</option>
-                            <option>Médecin deux</option>
-                            <option>Médecin trois</option>
-                            <option>Médecin quatre</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Sélectionnez une date de rdv</label>
-                        <div class="row">
-                            <div class="col">
-                                <select class="form-control">
-                                    <option>18 sept</option>
-                                    <option>19 sept</option>
-                                    <option>20 sept</option>
-                                    <option>21 sept</option>
-                                </select>
-                            </div>
-                            <div class="col">
-                                <select class="form-control">
-                                    <option>11:15</option>
-                                    <option>14:30</option>
-                                    <option>16:00</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+            <div class="form-group row">
+              <label class="col-form-label">Prénom</label>
+              <div class="col">
+                <input type="text" class="form-control" formControlName="lastName">
+              </div>
             </div>
+            <div class="form-group row">
+              <label class="col-form-label">Tél.</label>
+              <div class="col">
+                <input type="number" class="form-control" formControlName="phone">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-form-label">Date de naissance</label>
+              <div class="col">
+                <input type="date" class="form-control" id="start" name="trip-start" value="2018-07-22" min="2000-01-01"
+                  max="3000-12-31">
+              </div>
+            </div>
+          </form>
+
         </div>
-    </div>
-</div>
+        <div class="col">
+          <form>
+            <div class="form-group">
+              <label>Sélectionnez un médecin</label>
+              <select class="form-control">
+                <option>Médecin un</option>
+                <option>Médecin deux</option>
+                <option>Médecin trois</option>
+                <option>Médecin quatre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Sélectionnez une date de rendez-vous</label>
+              <div class="row">
+                <div class="col">
+                  <select class="form-control">
+                    <option>18 sept</option>
+                    <option>19 sept</option>
+                    <option>20 sept</option>
+                    <option>21 sept</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <select class="form-control">
+                    <option>11:15</option>
+                    <option>14:30</option>
+                    <option>16:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <br />
+            <button type="submit" style="float:right;" class="btn btn-success">Valider</button>
+          </form>
+        </div>
+      </div>

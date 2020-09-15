@@ -1,20 +1,15 @@
-<div class="card" style="width: 22rem; background:#F5F5F5;">
-  <div class="card-body">
-    <h5 class="card-title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Mes demandes de rendez-vous
-    </h5>
-    <div class="rdv" *ngFor="let rdv of rdvList">
-      <div *ngIf="rdv.statut == 'refuse'">
-        <img src="../assets/canceled.png">
-      </div>
-      <div *ngIf="rdv.statut == 'valide'">
-        <img src="../assets/validate.png">
-      </div>
-      <div *ngIf="rdv.statut == 'encours'">
-        <img src="../assets/wait.png">
-      </div>
-      {{rdv.date}} à {{rdv.heure}}<br />
-      <i>{{rdv.medecin}}</i>
-    </div>
-
+<h5 class="title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Mes demandes de rendez-vous
+</h5>
+<div class="rdv" *ngFor="let rdv of rdvList">
+  <div *ngIf="rdv.statut == 'refuse'">
+    <img src="../assets/canceled.png">
   </div>
+  <div *ngIf="rdv.statut == 'valide'">
+    <img src="../assets/validate.png">
+  </div>
+  <div *ngIf="rdv.statut == 'encours'">
+    <img src="../assets/wait.png">
+  </div>
+  {{rdv.date}} à {{rdv.heure}}<br />
+  <i>{{rdv.medecin}}</i>
 </div>
