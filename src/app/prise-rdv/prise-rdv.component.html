@@ -1,55 +1,32 @@
-<div class="card ml-2" style="width: 45rem;">
-    <div class="card-body">
-        <div class="row">
+<div class="card ml-2" style="width: 45rem; background:#f5f5f5;">
+  <div class="card-body">
+      <h5 class="card-title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Demande de rendez-vous
+        </h5>
+    <div class="row" style="padding:15px;">
+      <div class="col">
+        <form [formGroup]="infoReservation">
+          <div class="form-group row">
+            <label class="col-form-label">Nom</label>
             <div class="col">
-                <form [formGroup]="infoReservation">
-                    <div class="form-group row">
-                      <label class="col-form-label">Nom</label>
-                      <div class="col">
-                        <input type="text" class="form-control-plaintext" placeholder="jnojn" formControlName="firstName">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-form-label">Prénom</label>
-                        <div class="col">
-                          <input type="text" class="form-control-plaintext" formControlName="lastName">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-form-label">Tél.</label>
-                        <div class="col">
-                          <input type="number" class="form-control-plaintext" formControlName="phone">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-form-label">Date de naissance</label>
-                        <div class="col">
-                            <input type="date" id="start" name="trip-start"
-                            value="2018-07-22"
-                            min="2000-01-01" max="3000-12-31">
-                        </div>
-                      </div>
-                   
-                  </form>
-
+              <input type="text" class="form-control" placeholder="jnojn" formControlName="firstName">
             </div>
           </div>
           <div class="form-group row">
             <label class="col-form-label">Prénom</label>
             <div class="col">
-              <input type="text" class="form-control-plaintext">
+              <input type="text" class="form-control" formControlName="lastName">
             </div>
           </div>
           <div class="form-group row">
             <label class="col-form-label">Tél.</label>
             <div class="col">
-              <input type="number" class="form-control-plaintext">
+              <input type="number" class="form-control" formControlName="phone">
             </div>
           </div>
           <div class="form-group row">
             <label class="col-form-label">Date de naissance</label>
             <div class="col">
-              <input type="date" id="start" name="trip-start" value="2018-07-22" min="2000-01-01" max="3000-12-31">
+              <input type="date" class="form-control" id="start" name="trip-start" value="2018-07-22" min="2000-01-01" max="3000-12-31">
             </div>
           </div>
 

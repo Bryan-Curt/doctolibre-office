@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
-
 import { FormsModule }   from '@angular/forms';
 
 @Component({
@@ -21,9 +20,6 @@ export class PriseRdvComponent implements OnInit {
     jour : new FormControl('', Validators.required),
     heure : new FormControl('', Validators.required)
   })
-
-
-
 
   onSubmit() {
   }
