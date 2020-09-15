@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'doctolibre-office';
 
   constructor(private service: ServiceService) {
+    console.log(service.getPractitioners());
     //service.insertAppointment({
     //  resourceType: 'Appointment',
      // status: 'noshow',
