@@ -61,8 +61,8 @@ export class ServiceService {
   }
 
   // Envoyer un Appointment
-  putAppointment(datas: any): Promise<any>{
-    return this.http.put(this.server + 'api/appointment/', datas, {
+  insertAppointment(datas: any): Promise<any>{
+    return this.http.post(this.server + 'api/appointment/', datas, {
       headers : this.setHeaders()
     })
       .toPromise().then().catch(this.handleError);

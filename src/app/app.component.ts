@@ -9,20 +9,18 @@ export class AppComponent {
   title = 'doctolibre-office';
 
   constructor(private service: ServiceService) {
-    service.putAppointment('{\n' +
-      '    "resourceType": "Patient",\n' +
-      '    "active": true,\n' +
-      '    "name": [\n' +
-      '        {\n' +
-      '            "use": "official",\n' +
-      '            "family": "Cryan",\n' +
-      '            "given": [\n' +
-      '                "Burt",\n' +
-      '                "Albert"\n' +
-      '            ]\n' +
-      '        }\n' +
-      '    ]\n' +
-      '}').then(
+    service.insertAppointment({
+      resourceType: 'Appointment',
+      status: 'noshow',
+      participant: [
+        {
+          actor: {
+            reference: 'Patient/5f5f8f733ef92800151f13aa'
+          },
+          status: 'accepted'
+        }
+      ]
+    }).then(
       patients => {
         console.log(patients);
       });
