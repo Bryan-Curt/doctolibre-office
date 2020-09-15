@@ -8,7 +8,7 @@ import { FormsModule }   from '@angular/forms';
   styleUrls: ['./prise-rdv.component.css']
 })
 export class PriseRdvComponent implements OnInit {
-  
+  medecins = ['un', 'deux', 'trois']
   constructor() { }
   infoReservation = new FormGroup({
     lastName : new FormControl('curt', Validators.required),
@@ -16,11 +16,12 @@ export class PriseRdvComponent implements OnInit {
     phone : new FormControl('6763867859', Validators.required),
     birthdate : new FormControl('', Validators.required),
 
-    medecin : new FormControl('', Validators.required),
+    medecin : new FormControl(this.medecins, Validators.required),
     jour : new FormControl('', Validators.required),
     heure : new FormControl('', Validators.required)
   })
 
+  
   onSubmit() {
   }
   ngOnInit(): void {
