@@ -4,92 +4,69 @@
             <div class="col">
                 <form [formGroup]="infoReservation">
                     <div class="form-group row">
-                      <label class="col-form-label">Nom</label>
-                      <div class="col">
-                        <input type="text" class="form-control-plaintext" placeholder="jnojn" formControlName="firstName">
-                      </div>
+                        <label class="col-form-label">Nom</label>
+                        <div class="col">
+                            <input type="text" class="form-control-plaintext" placeholder="jnojn"
+                                formControlName="firstName">
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-form-label">Prénom</label>
                         <div class="col">
-                          <input type="text" class="form-control-plaintext" formControlName="lastName">
+                            <input type="text" class="form-control-plaintext" formControlName="lastName">
                         </div>
-                      </div>
-                      <div class="form-group row">
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label">Tél.</label>
                         <div class="col">
-                          <input type="number" class="form-control-plaintext" formControlName="phone">
+                            <input type="number" class="form-control-plaintext" formControlName="phone">
                         </div>
-                      </div>
-                      <div class="form-group row">
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label">Date de naissance</label>
                         <div class="col">
-                            <input type="date" id="start" name="trip-start"
-                            value="2018-07-22"
-                            min="2000-01-01" max="3000-12-31">
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2000-01-01"
+                                max="3000-12-31">
                         </div>
-                      </div>
-                   
-                  </form>
+                    </div>
+
+                </form>
 
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-form-label">Prénom</label>
             <div class="col">
-              <input type="text" class="form-control-plaintext">
+                <form>
+                    <div class="form-group">
+                        <label>Sélectionnez un médecin</label>
+                        <select class="form-control">
+                            <option>Médecin un</option>
+                            <option>Médecin deux</option>
+                            <option>Médecin trois</option>
+                            <option>Médecin quatre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Sélectionnez une date de rdv</label>
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control">
+                                    <option>18 sept</option>
+                                    <option>19 sept</option>
+                                    <option>20 sept</option>
+                                    <option>21 sept</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-control">
+                                    <option>11:15</option>
+                                    <option>14:30</option>
+                                    <option>16:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success float-right">Submit</button>
+                </form>
             </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-form-label">Tél.</label>
-            <div class="col">
-              <input type="number" class="form-control-plaintext">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-form-label">Date de naissance</label>
-            <div class="col">
-              <input type="date" id="start" name="trip-start" value="2018-07-22" min="2000-01-01" max="3000-12-31">
-            </div>
-          </div>
-
-        </form>
-
-      </div>
-      <div class="col">
-        <form>
-          <div class="form-group">
-            <label>Sélectionnez un médecin</label>
-            <select class="form-control">
-              <option>Médecin un</option>
-              <option>Médecin deux</option>
-              <option>Médecin trois</option>
-              <option>Médecin quatre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Sélectionnez une date de rdv</label>
-            <div class="row">
-              <div class="col">
-                <select class="form-control">
-                  <option>18 sept</option>
-                  <option>19 sept</option>
-                  <option>20 sept</option>
-                  <option>21 sept</option>
-                </select>
-              </div>
-              <div class="col">
-                <select class="form-control">
-                  <option>11:15</option>
-                  <option>14:30</option>
-                  <option>16:00</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn btn-success float-right">Submit</button>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
