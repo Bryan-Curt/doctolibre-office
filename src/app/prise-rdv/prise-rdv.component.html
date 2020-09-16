@@ -1,6 +1,6 @@
 <h5 class="title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Demande de rendez-vous
 </h5>
-<form [formGroup]="infoReservation">
+<form [formGroup]="infoReservation" (ngSubmit)="onSubmit()">
     <div class="row" style="padding:15px;">
         <div class="col">
 
@@ -23,13 +23,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-form-label">Date de naissance</label>
-                <div class="col">
-                    <input type="date" class="form-control" id="start" name="trip-start" value="2018-07-22"
-                        min="2000-01-01" max="3000-12-31" formControlName="phone">
-                </div>
-            </div>
-            <div class="form-group row">
                 <label class="col-form-label">ID Unique</label>
                 <div class="col">
                     <input type="text" class="form-control" formControlName="lastName">
@@ -42,22 +35,20 @@
 
     <div class="form-group">
         <label>Sélectionnez un médecin</label>
-        <select formControlName="medecin" id="f">
+        <select class="form-control" formControlName="medecin" id="f">
             <option value=null disabled selected>le medecin</option>
-            <option *ngFor="let item of practitioners">{{item.family}}</option>
+            <option *ngFor="let item of practitioners">{{item.name[0].family}}</option>
         </select>
     </div>
     <div class="form-group">
         <label>Sélectionnez une date de rendez-vous</label>
         <div class="row">
             <div class="col">
-                <select class="form-control">
-                    <option value=null disabled selected>date</option>
-                    <option *ngFor="let item of horaireDate">{{item}}</option>
-                </select>
+                <input type="date" class="form-control" id="start" name="trip-start" 
+                        min="2000-01-01" max="3000-12-31" formControlName="phone" formControlName="jour">
             </div>
             <div class="col">
-                <select class="form-control">
+                <select class="form-control" formControlName="heure">
                     <option value=null disabled selected>heure</option>
                     <option *ngFor="let item of horaireHeure">{{item}}</option>
                 </select>
