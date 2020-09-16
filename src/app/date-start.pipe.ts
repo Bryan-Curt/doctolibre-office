@@ -5,14 +5,12 @@ import { ServiceService } from './service.service';
   name: 'dateStart'
 })
 export class DateStartPipe implements PipeTransform {
-  constructor(private service: ServiceService) {
-
-  }
+  constructor(private service: ServiceService) { }
   transform(id: string): any {
     console.log(id);
-    let appt: any = 'dd';
-    console.log(this.service.getReference(id));
-    return appt.start;
+    let appt: any = '';
+
+
   }
 
 }

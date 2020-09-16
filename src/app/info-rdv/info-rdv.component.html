@@ -1,6 +1,6 @@
 <h5 class="title" style="border-bottom:1px solid #D6D6D6; padding-bottom:15px;">Mes demandes de rendez-vous
 </h5>
-<div class="rdv" *ngFor="let apt of appointments">
+<div class="rdv" *ngFor="let apt of appointmentsResponse">
   <div *ngIf="apt.participantStatus == 'declined'">
     <img src="../assets/canceled.png">
   </div>
@@ -10,7 +10,8 @@
   <div *ngIf="apt.participantStatus == 'tentative'">
     <img src="../assets/wait.png">
   </div>
-  {{apt.start}} à {{apt.end}}<br />
+  {{apt.datestart | date:'dd/MM/yyyy hh:ss'}} à {{apt.dateend | date:'dd/MM/yyyy hh:ss'}}<br />
   <i>{{apt.id}}</i>
-  <p>{{apt.appointment.reference | dateStart }}</p>
+  <p>{{apt.comment }}</p>
+  <p>{{apt.datestart }}</p>
 </div>
