@@ -18,6 +18,12 @@ export class ServiceService {
     return new HttpHeaders({'Content-Type': 'application/json'});
   }
 
+  // Appeler une référence (fonctionnel)
+  getReference(ref: string): Promise<any>{
+    return this.http.get(this.server + 'api/' + ref)
+      .toPromise().catch(this.handleError);
+  }
+
   // Récupérer la liste des patients (fonctionnel)
   getPatients(): Promise<any> {
     return this.http.get(this.server + 'api/patient/')

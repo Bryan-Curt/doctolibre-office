@@ -36,7 +36,7 @@ export class PriseRdvComponent implements OnInit {
   }
   ngOnInit(): void {
 
-  console.log(this.infoReservation);
+    console.log(this.infoReservation);
 
   }
 
