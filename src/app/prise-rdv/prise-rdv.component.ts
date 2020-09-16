@@ -46,9 +46,6 @@ export class PriseRdvComponent implements OnInit {
       }
     }
     const dateStart = new Date(this.infoReservation.value.jour + ' ' + this.infoReservation.value.heure + ':00');
-    const dateEnd = dateStart;
-    dateEnd.setHours(dateEnd.getHours() + 1);
-    console.log(dateEnd);
     this.patRef.reference = 'Patient/5f5f8f733ef92800151f13aa';
     this.pracRef.reference = 'Practitioner/' + med.id;
     this.pat.actor = this.patRef;
@@ -58,6 +55,9 @@ export class PriseRdvComponent implements OnInit {
     this.data.status = 'pending';
     this.data.participant = [this.pat, this.prac];
     this.data.start = dateStart.toISOString();
+    const dateEnd = dateStart;
+    dateEnd.setHours(dateEnd.getHours() + 1);
+    console.log(dateEnd);
     this.data.end = dateEnd.toISOString();
     console.log(this.data);
 
