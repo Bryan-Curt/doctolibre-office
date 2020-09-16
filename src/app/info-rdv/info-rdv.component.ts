@@ -17,11 +17,21 @@ export class InfoRdvComponent implements OnInit {
       this.appointmentsResponse.forEach( apptResponse => {
         console.log(apptResponse);
         this.service.getReference(apptResponse.appointment.reference).then(apt => {
-          apptResponse.datestart = (new Date(apt.start).toDateString());
-          apptResponse.dateend = (new Date(apt.end).toDateString());
+          apptResponse.datestart = new Date(apt.start);
+          apptResponse.dateend = new Date(apt.end);
+          for (const x of apt.participant){
+            if (x.actor.reference.includes('Practitioner')){
+              apptResponse.practitioner = x.actor.reference;
+            }
+          }
+          this.service.getReference(apptResponse.practitioner).then(prac => {
+            apptResponse.pracname = prac.name[0].text;
+            console.log(apptResponse.pracname);
+          });
           console.log('datestart', apptResponse.datestart);
           console.log('dateend', apptResponse.dateend);
         });
+
       });
     });
   }

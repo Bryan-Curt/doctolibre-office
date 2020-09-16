@@ -10,8 +10,7 @@
   <div *ngIf="apt.participantStatus == 'tentative'">
     <img src="../assets/wait.png">
   </div>
-  {{apt.datestart | date:'dd/MM/yyyy hh:ss'}} à {{apt.dateend | date:'dd/MM/yyyy hh:ss'}}<br />
+  {{apt.datestart | date:'dd/MM/yyyy HH:ss'}} à {{apt.dateend | date:'dd/MM/yyyy HH:ss'}}<br />
   <i>{{apt.id}}</i>
-  <p>{{apt.comment }}</p>
-  <p>{{apt.datestart }}</p>
+  <p>{{apt.pracname }}</p>
 </div>

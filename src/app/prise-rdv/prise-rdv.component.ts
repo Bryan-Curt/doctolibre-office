@@ -33,9 +33,9 @@ export class PriseRdvComponent implements OnInit {
       this.idU.setValue(this.patient.id)
       console.log(this.patient)
     })
-     
+
   }
-  
+
   lastName = new FormControl('', Validators.required);
   firstName = new FormControl('', Validators.required);
   idU = new FormControl('',Validators.required)
@@ -70,7 +70,7 @@ export class PriseRdvComponent implements OnInit {
     this.pat.actor = this.patRef;
     this.prac.actor = this.pracRef;
     this.pat.status = 'accepted';
-    this.prac.status = 'accepted';
+    this.prac.status = 'tentative';
     this.data.status = 'pending';
     this.data.participant = [this.pat, this.prac];
     this.data.start = dateStart.toISOString();
@@ -81,12 +81,12 @@ export class PriseRdvComponent implements OnInit {
     this.data.end = dateEnd.toISOString();
     console.log(this.data);
 
-    // this.service.insertAppointment(this.data);
+    this.service.insertAppointment(this.data);
   }
   ngOnInit(): void {
 
-    
-    
+
+
   }
 
 }
