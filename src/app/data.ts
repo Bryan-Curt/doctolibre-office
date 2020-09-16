@@ -4,6 +4,7 @@ export class Data {
        start? : string;
        end? : string;
        participant? : Participants[];
+       comment? : string;
       
   };
 export class Participants{

@@ -16,16 +16,17 @@
                     <input type="text" class="form-control" formControlName="lastName">
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-form-label">Tél.</label>
-                <div class="col">
-                    <input type="number" class="form-control" formControlName="phone">
-                </div>
-            </div>
+            
             <div class="form-group row">
                 <label class="col-form-label">ID Unique</label>
                 <div class="col">
-                    <input type="text" class="form-control" formControlName="lastName">
+                    <input type="text" class="form-control" formControlName="idU">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label">Commentaire</label>
+                <div class="col">
+                    <textarea class="form-control" formControlName="comment"></textarea>
                 </div>
             </div>
 
@@ -35,8 +36,7 @@
 
     <div class="form-group">
         <label>Sélectionnez un médecin</label>
-        <select class="form-control" formControlName="medecin" id="f">
-            <option value=null disabled selected>le medecin</option>
+        <select class="form-control" formControlName="medecin" >
             <option *ngFor="let item of practitioners">{{item.name[0].family}}</option>
         </select>
     </div>
