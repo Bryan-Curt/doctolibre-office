@@ -82,6 +82,7 @@ export class PriseRdvComponent implements OnInit {
     console.log(this.data);
 
     this.service.insertAppointment(this.data);
+    window.location.reload();
   }
   ngOnInit(): void {
 
