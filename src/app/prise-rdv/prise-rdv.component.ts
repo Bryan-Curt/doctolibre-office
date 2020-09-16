@@ -13,6 +13,8 @@ import {Participants} from '../data';
 })
 export class PriseRdvComponent implements OnInit {
   practitioners = [];
+  patient : any;
+
   horaireHeure = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
   data = new Data() ;
   pracRef = new Reference() ;
@@ -25,16 +27,33 @@ export class PriseRdvComponent implements OnInit {
         this.practitioners.push(p);
       }
     });
+    service.getPatient('5f5f8f733ef92800151f13aa').then(p =>{ this.patient =p;
+      this.lastName.setValue(this.patient.name[0].family)
+      this.firstName.setValue(this.patient.name[0].given[0])
+      this.idU.setValue(this.patient.id)
+      console.log(this.patient)
+    })
+     
   }
-  infoReservation = new FormGroup({
-    lastName : new FormControl('curt', Validators.required),
-    firstName : new FormControl('bryan', Validators.required),
-    phone : new FormControl('6763867859', Validators.required),
-    birthdate : new FormControl(''),
+  
+  lastName = new FormControl('', Validators.required);
+  firstName = new FormControl('', Validators.required);
+  idU = new FormControl('',Validators.required)
 
-    medecin : new FormControl(this.practitioners, Validators.required),
-    jour : new FormControl('', ),
-    heure : new FormControl('', )
+  medecin = new FormControl(this.practitioners, Validators.required);
+  jour = new FormControl('',Validators.required );
+  heure = new FormControl('', Validators.required);
+  comment = new FormControl('', );
+
+  infoReservation = new FormGroup({
+    lastName : this.lastName,
+    firstName : this.firstName,
+    idU : this.idU,
+
+    medecin : this.medecin,
+    jour : this.jour,
+    heure : this.heure,
+    comment : this.comment
   });
 
 
@@ -55,17 +74,19 @@ export class PriseRdvComponent implements OnInit {
     this.data.status = 'pending';
     this.data.participant = [this.pat, this.prac];
     this.data.start = dateStart.toISOString();
+    this.data.comment = this.infoReservation.value.comment;
     const dateEnd = dateStart;
     dateEnd.setHours(dateEnd.getHours() + 1);
     console.log(dateEnd);
     this.data.end = dateEnd.toISOString();
     console.log(this.data);
 
-    this.service.insertAppointment(this.data);
+    // this.service.insertAppointment(this.data);
   }
   ngOnInit(): void {
 
-
+    
+    
   }
 
 }
